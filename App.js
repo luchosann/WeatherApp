@@ -10,14 +10,14 @@ export default function App() {
   const [weatherData, setWeatherData] = useState(null);
   const backgroundNight = ['#0D2B46', '#153450','#1B3D5E'];
   const backgroundDay = ['#337CC2', '#266298','#13426D'];
-
+  const id = '';
   const [currentTime, setCurrentTime] = useState(new Date());
 
 
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Montevideo&appid=1bfede12f68bbf067ef1318eba6caa96`)
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Montevideo&appid=${id}}`)
       const data = await response.json();
       setWeatherData(data);
       console.log(data);
